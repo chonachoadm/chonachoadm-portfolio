@@ -6,8 +6,8 @@ export default {
 
 <template>
     <footer>
-        <div class="row w-100 justify-content-center">
-            <div class="col-12 col-sm-6 gap-2 d-flex flex-column align-items-center my-4">
+        <div class="d-flex w-100 justify-content-around">
+            <div class="d-flex flex-column align-items-start my-4">
                 <h4>
                     Redes Sociales
                 </h4>
@@ -25,18 +25,37 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="col-12 col-sm-6 gap-2 d-flex flex-column align-items-center my-4">
+            <div class="d-flex flex-column align-items-start my-4">
+                <h4>Sitios Web</h4>
+                <ul class="list-unstyled">
+                    <li><a href="https://esquina-cultural-production-l2ojal.laravel.cloud" class="link-footer"
+                            target="_blank" rel="noopener noreferrer">Esquina Cultural</a></li>
+                    <li><a href="https://cajaclub.vercel.app" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Caja Club</a></li>
+                    <li><a href="https://ciajeruncio.com" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Cía Jeruncio</a>
+                    </li>
+                    <li><a href="https://final-ah-f76b6.web.app" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Break House</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column align-items-start my-4">
                 <h4>Repositorios</h4>
                 <ul class="list-unstyled">
+                    <li><a href="https://github.com/chonachoadm/esquina-cultural" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Esquina Cultural</a></li>
+                    <li><a href="https://github.com/chonachoadm/caja-club" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Caja Club</a></li>
+                    <li><a href="https://github.com/chonachoadm/cia-jeruncio" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Cía Jeruncio</a>
+                    </li>
                     <li><a href="https://github.com/chonachoadm/bosque-de-los-sentidos" class="link-footer"
                             target="_blank" rel="noopener noreferrer">Bosque de
                             los Sentidos</a></li>
                     <li><a href="https://github.com/chonachoadm/comunidad_cocinera" class="link-footer" target="_blank"
                             rel="noopener noreferrer">Comunidad
                             Cocinera</a></li>
-                    <li><a href="https://github.com/chonachoadm/lista-de-tareas" class="link-footer" target="_blank"
-                            rel="noopener noreferrer">Lista de Tareas</a>
-                    </li>
                 </ul>
             </div>
         </div>

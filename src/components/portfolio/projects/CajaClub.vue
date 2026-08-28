@@ -18,7 +18,7 @@ export default {
                 </div>
                 <h2>Caja Club</h2>
                 <div class="d-flex justify-content-center ps-4 ms-4">
-                    <a class="visit-website-button" href="https://cajaclub.vercel.app/" target="_blank">Sitio web</a>
+                    <a class="visit-website-button" href="https://cajaclub.vercel.app" target="_blank">Sitio web</a>
                 </div>
             </div>
             <div>
@@ -47,7 +47,7 @@ export default {
                     </div>
                 </div>
                 <div class="w-100 d-flex justify-content-center mt-4">
-                    <a class="visit-website-button" href="https://cajaclub.vercel.app/" target="_blank">Sitio web</a>
+                    <a class="visit-website-button" href="https://cajaclub.vercel.app" target="_blank">Sitio web</a>
                 </div>
             </div>
         </section>
