@@ -11,7 +11,6 @@ export default {
 
 <template>
     <div>
-
         <section>
             <div class="d-flex align-items-center gap-4 mb-4">
                 <div>

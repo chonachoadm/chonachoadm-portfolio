@@ -122,7 +122,7 @@ export default {
             </div>
             <input type="text" name="company" style="display:none">
             <div class="w-100 d-flex justify-content-center mt-4">
-                <button type="submit" class="contact-button rounded-pill" :disabled="loading">{{ loading ? 'Enviando...'
+                <button type="submit" class="contact-button" :disabled="loading">{{ loading ? 'Enviando...'
                     : 'Enviar' }}</button>
             </div>
         </form>
@@ -131,8 +131,8 @@ export default {
 
 <style scoped>
 section {
-    margin: 20% 10%;
-    scroll-margin-top: 4rem;
+    margin: 10%;
+    /* scroll-margin-top: 4rem; */
 }
 
 .contact-form {
@@ -140,19 +140,21 @@ section {
 }
 
 .contact-button {
-    padding: 2% 5%;
-    background-image: linear-gradient(70deg, rgb(2, 0, 65), rgb(45, 43, 83));
-    color: white;
-    font-weight: bold;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
     text-decoration: none;
-    transition: all 0.2 ease;
-    border: none;
+    background-color: transparent;
+    padding: .5em 1em;
+    border: 4px solid black;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+
+    transition: all .2s ease;
 }
 
-.contact-button:hover,
-.contact-button:focus {
-    background-image: linear-gradient(70deg, rgb(20, 18, 90), rgb(73, 71, 113));
+.contact-button:focus,
+.contact-button:hover {
+    background-color: black;
+    color: white;
 }
 
 .success {
