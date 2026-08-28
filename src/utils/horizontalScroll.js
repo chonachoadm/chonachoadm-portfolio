@@ -36,7 +36,7 @@ export function createHorizontalScroll(container) {
         animation: tween,
         scrub: 2,
         invalidateOnRefresh: true,
-        markers: true,
+        markers: false,
     })
 
     return {
