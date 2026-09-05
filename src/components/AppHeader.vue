@@ -191,6 +191,7 @@ ul li {
         align-items: center;
         flex-wrap: wrap;
         gap: 4;
+        margin-top: 5em;
     }
 
     h1 {
@@ -199,7 +200,6 @@ ul li {
 
     .box-header {
         height: 50vh;
-        margin-top: 5em;
     }
 
     .section-techs {

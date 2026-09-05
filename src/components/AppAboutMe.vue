@@ -59,11 +59,17 @@ section {
 
 
 @media (max-width: 1024px) {
+    section {
+        margin-inline: 5%;
+    }
+
     .box-about-me {
+        margin-top: 3em;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        gap: 2em;
     }
 
     p {
@@ -71,24 +77,22 @@ section {
         font-size: 1rem;
     }
 
-    section {
+    /* section {
         background-image: url(../img/about/about-background-md_sm.webp);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         padding: 0;
-    }
-
-    .about-me-bg {
-        background-color: rgba(255, 255, 255, 0.75);
-        padding: 10%;
-        box-shadow: 0 0 15px rgba(124, 138, 246, 0.5);
-    }
+    } */
 }
 
 @media (max-width: 768px) {
+    section {
+        margin-top: 5em;
+    }
+
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }
 </style>
