@@ -40,13 +40,7 @@ p {
 
 section {
     margin: 10%;
-    /* padding: 0 5%; */
     scroll-margin-top: 4rem;
-    /* background-image: url(../img/about/about-background.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: right center; */
-    /* box-shadow: 0 0 15px rgba(124, 138, 246, 0.5); */
 
 }
 
@@ -76,14 +70,6 @@ section {
         width: 100%;
         font-size: 1rem;
     }
-
-    /* section {
-        background-image: url(../img/about/about-background-md_sm.webp);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        padding: 0;
-    } */
 }
 
 @media (max-width: 768px) {

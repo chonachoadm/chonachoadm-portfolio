@@ -132,7 +132,6 @@ export default {
 <style scoped>
 section {
     margin: 10%;
-    /* scroll-margin-top: 4rem; */
 }
 
 .contact-form {
@@ -182,6 +181,11 @@ small {
 }
 
 @media (max-width: 1024px) {
+    section {
+        margin-inline: 5%;
+        margin-top: 5em;
+    }
+
     .contact-form {
         width: 100%;
         margin: 0;
@@ -190,7 +194,7 @@ small {
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }
 </style>
