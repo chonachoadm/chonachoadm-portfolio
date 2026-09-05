@@ -3,14 +3,31 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export function createHorizontalScroll(container) {
+export async function createHorizontalScroll(container) {
     const demoImagesContainer = container.querySelector('.demo-images-container');
     const demoImages = container.querySelector('.demo-images');
-    const images = container.querySelectorAll('.demo-images img');
+    const images = [...container.querySelectorAll('.demo-images img')];
 
     if (!demoImages || !demoImagesContainer || !images.length) {
         return
     }
+
+    await Promise.all(
+        images.map((image) => {
+            if (image.complete) {
+                return image.decode?.().catch(() => { })
+            }
+
+            return new Promise((resolve) => {
+                image.addEventListener('load', resolve, { once: true })
+                image.addEventListener('error', resolve, { once: true })
+            })
+        })
+    )
+
+    await new Promise((resolve) => {
+        requestAnimationFrame(resolve)
+    })
 
     const getScrollAmount = () => {
         const lastImage = images[images.length - 1]

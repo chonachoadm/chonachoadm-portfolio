@@ -3,9 +3,13 @@ import { createHorizontalScroll } from '@/utils/horizontalScroll'
 
 export default {
     name: 'BosqueSentidos',
-    mounted() {
+    async mounted() {
         createHorizontalScroll(this.$el)
-    }
+    },
+    beforeUnmount() {
+        this.horizontalScroll?.tween.kill()
+        this.horizontalScroll?.trigger.kill()
+    },
 }
 </script>
 

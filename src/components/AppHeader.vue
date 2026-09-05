@@ -95,6 +95,18 @@ export default {
                 <li>
                     <img src="@/img/techs/wordpress.svg" alt="Wordpress" class="img-fluid" />
                 </li>
+                <li>
+                    <img src="@/img/techs/mongodb.svg" alt="MongoDB" class="img-fluid" />
+                </li>
+                <li>
+                    <img src="@/img/techs/react.svg" alt="React" class="img-fluid" />
+                </li>
+                <li>
+                    <img src="@/img/techs/express.svg" alt="Express" class="img-fluid" />
+                </li>
+                <li>
+                    <img src="@/img/techs/node.svg" alt="NodeJS" class="img-fluid" />
+                </li>
             </ul>
         </div>
     </section>
@@ -119,7 +131,7 @@ h2 {
 }
 
 .box-header {
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,32 +142,36 @@ h2 {
 
 .section-techs {
     overflow: hidden;
-    margin-inline: 2em;
+    /* margin-inline: 2em; */
     mask-image: linear-gradient(to right,
             transparent 10%,
-            black 30%,
-            black 70%,
+            black 40%,
+            black 60%,
             transparent 90%);
     -webkit-mask-image: linear-gradient(to right,
             transparent 10%,
-            black 30%,
-            black 70%,
+            black 40%,
+            black 60%,
             transparent 90%);
+    width: 100%;
 }
 
 .track-techs {
+    display: flex;
     width: max-content;
+    gap: 3em;
     animation: scroll 20s linear infinite;
 }
 
 ul li img {
     height: 100px;
+    width: auto;
     flex-shrink: 0;
-    margin: 0 1rem;
+    object-fit: cover;
 }
 
 ul li {
-    margin: 0 1em;
+    /* margin: 0 1em; */
 }
 
 @keyframes scroll {
@@ -165,7 +181,7 @@ ul li {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 1.5em));
     }
 }
 
@@ -182,22 +198,14 @@ ul li {
     }
 
     .box-header {
-        height: 75vh;
+        height: 50vh;
+        margin-top: 5em;
     }
 
     .section-techs {
         overflow: hidden;
-        margin-inline: 2em;
-        mask-image: linear-gradient(to right,
-                transparent 0%,
-                black 20%,
-                black 80%,
-                transparent 100%);
-        -webkit-mask-image: linear-gradient(to right,
-                transparent 0%,
-                black 20%,
-                black 80%,
-                transparent 100%);
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 }
 </style>
