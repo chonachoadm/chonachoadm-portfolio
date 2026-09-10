@@ -47,7 +47,7 @@ export async function createHorizontalScroll(container) {
 
     const trigger = ScrollTrigger.create({
         trigger: demoImagesContainer,
-        start: 'top 2%',
+        start: 'center center',
         end: () => `+=${Math.abs(getScrollAmount())}`,
         pin: true,
         animation: tween,

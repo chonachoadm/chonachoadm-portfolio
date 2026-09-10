@@ -16,7 +16,7 @@ export default {
 <template>
     <div>
         <section>
-            <div class="d-flex align-items-center gap-4 mb-4">
+            <div class="d-flex align-items-center gap-2 gap-lg-4 mb-4">
                 <div>
                     <img class="icon-img" src="@/img/projects/logo-bosque_de_los_sentidos.svg"
                         alt="Ícono de Bosque de los Sentidos">
@@ -24,7 +24,7 @@ export default {
                 <h2>Bosque de los Sentidos</h2>
             </div>
             <div>
-                <h3>Ludoteca encarada a juegos inclusivos.</h3>
+                <h3>Ludoteca de juegos inclusivos.</h3>
                 <p>E-commerce dirigido a tanto infancias como personas adultas con discapacidades, generando un espacio
                     de
                     inclusividad y acompañamiento para aquellos que más se beneficiarían de ello.</p>
@@ -102,6 +102,8 @@ section {
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
     border-radius: 1em;
     width: 90%;
+    max-width: 100vw;
+    max-height: 100vh;
     margin-inline: 5%;
     margin-bottom: 5%;
 }
@@ -132,5 +134,26 @@ h3 {
 .visit-website-button:hover {
     background-color: black;
     color: white;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding-inline: 5%;
+        margin-inline: .75rem;
+    }
+
+    .title-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .icon-img {
+        width: 75px;
+    }
+
+    .techs-container ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 </style>

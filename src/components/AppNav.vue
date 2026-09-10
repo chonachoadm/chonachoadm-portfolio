@@ -9,6 +9,9 @@ ScrollTrigger.create({
     end: 999999,
 
     onEnter: () => {
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            return
+        }
         gsap.to(".nav-bar", {
             padding: "1em 2em",
             backgroundColor: "#00000000",
@@ -24,6 +27,9 @@ ScrollTrigger.create({
     },
 
     onLeaveBack: () => {
+        if (window.matchMedia("(max-width: 1024px)").matches) {
+            return
+        }
         gsap.to(".nav-bar", {
             padding: "2em",
             backgroundColor: "#000000d9",
@@ -45,6 +51,19 @@ export default {
         return {
             openNav: false,
         }
+    },
+    mounted() {
+        // resync nav-bar styles if the breakpoint is crossed via resize instead of scroll
+        window.matchMedia("(max-width: 1024px)").addEventListener("change", (e) => {
+            if (e.matches) return
+            if (window.scrollY > 0) {
+                gsap.set(".nav-bar", { padding: "1em 2em", backgroundColor: "#00000000", backdropFilter: "none" });
+                gsap.set(".nav-bar a", { color: "#000000" });
+            } else {
+                gsap.set(".nav-bar", { padding: "2em", backgroundColor: "#000000d9", backdropFilter: "blur(2em)" });
+                gsap.set(".nav-bar a", { color: "#ffffff" });
+            }
+        });
     },
     watch: {
 

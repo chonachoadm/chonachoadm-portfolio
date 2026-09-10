@@ -18,31 +18,35 @@ export default {
     <section id="Projects">
         <div class="container">
             <h1 class="mb-4">Proyectos</h1>
-            <ul class="list-unstyled d-flex techs-list">
+            <ul class="list-unstyled techs-list">
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold" to="/portfolio/esquina-cultural">Esquina
+                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/esquina-cultural">
+                        Esquina
                         Cultural
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold" to="/portfolio/bosque-de-los-sentidos">
+                    <RouterLink class="text-decoration-none text-dark fw-bold link"
+                        to="/portfolio/bosque-de-los-sentidos">
                         Bosque de los Sentidos</RouterLink>
                 </li>
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold" to="/portfolio/caja-club">Caja Club
+                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/caja-club">Caja Club
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold" to="/portfolio/cia-jeruncio">Cía Jeruncio
+                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/cia-jeruncio">Cía
+                        Jeruncio
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold" to="/portfolio/comunidad-cocinera">
+                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/comunidad-cocinera">
                         Comunidad Cocinera
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold" to="/portfolio/break-house">Break House
+                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/break-house">Break
+                        House
                     </RouterLink>
                 </li>
             </ul>
@@ -58,6 +62,7 @@ section {
 }
 
 .techs-list {
+    display: flex;
     background-color: white;
     width: fit-content;
     margin: 0;
@@ -69,6 +74,9 @@ section {
 li {
     padding: .7em 2em;
     box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    align-items: center;
 }
 
 li:has(.router-link-exact-active) {
@@ -83,7 +91,21 @@ li:has(.router-link-exact-active) {
     }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
+    section {
+        width: 100%;
+        /* overflow: scroll; */
+    }
 
-} */
+    .techs-list {
+        flex-wrap: wrap;
+        width: 100%;
+        /* overflow-x: scroll; */
+    }
+
+    li {
+        padding-inline: 1em;
+        width: 50%;
+    }
+}
 </style>
