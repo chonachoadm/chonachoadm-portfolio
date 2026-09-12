@@ -35,7 +35,7 @@ export default {
                     </RouterLink>
                 </li>
                 <li>
-                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/cia-jeruncio">Cía
+                    <RouterLink class="text-decoration-none text-dark fw-bold link" to="/portfolio/cia-jeruncio">Cía.
                         Jeruncio
                     </RouterLink>
                 </li>

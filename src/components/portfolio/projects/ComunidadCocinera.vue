@@ -62,12 +62,12 @@ export default {
     <div>
 
         <section>
-            <div class="d-flex align-items-center gap-2 gap-lg-4 mb-4">
+            <div class="d-flex align-items-center gap-2 gap-lg-4 my-4">
                 <div>
                     <img class="icon-img" src="@/img/projects/logo-comunidad_cocinera.svg"
                         alt="Ícono de Comunidad Cocinera">
                 </div>
-                <h2>Comunidad Cocinera</h2>
+                <h2 class="mb-0">Comunidad Cocinera</h2>
             </div>
             <div>
                 <h3>Red Social para cocina amateur.</h3>

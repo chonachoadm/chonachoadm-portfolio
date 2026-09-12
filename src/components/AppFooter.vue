@@ -6,8 +6,8 @@ export default {
 
 <template>
     <footer>
-        <div class="d-flex w-100 justify-content-around">
-            <div class="d-flex flex-column align-items-start my-4">
+        <div class="row justify-content-around">
+            <div class="col-12 col-md-4 col-lg-4 d-flex flex-column align-items-center my-4">
                 <h4>
                     Redes Sociales
                 </h4>
@@ -25,7 +25,7 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="d-flex flex-column align-items-start my-4">
+            <div class="col-12 col-md-4 col-lg-4 d-flex flex-column align-items-center my-4">
                 <h4>Sitios Web</h4>
                 <ul class="list-unstyled">
                     <li><a href="https://esquina-cultural-production-l2ojal.laravel.cloud" class="link-footer"
@@ -40,7 +40,7 @@ export default {
                     </li>
                 </ul>
             </div>
-            <div class="d-flex flex-column align-items-start my-4">
+            <div class="col-12 col-md-4 col-lg-4 d-flex flex-column align-items-center my-4">
                 <h4>Repositorios</h4>
                 <ul class="list-unstyled">
                     <li><a href="https://github.com/chonachoadm/esquina-cultural" class="link-footer" target="_blank"
@@ -56,6 +56,8 @@ export default {
                     <li><a href="https://github.com/chonachoadm/comunidad_cocinera" class="link-footer" target="_blank"
                             rel="noopener noreferrer">Comunidad
                             Cocinera</a></li>
+                    <li><a href="https://github.com/chonachoadm/break-house" class="link-footer" target="_blank"
+                            rel="noopener noreferrer">Break House</a></li>
                 </ul>
             </div>
         </div>

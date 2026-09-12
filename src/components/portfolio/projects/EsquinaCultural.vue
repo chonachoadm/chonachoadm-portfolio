@@ -61,13 +61,15 @@ export default {
 <template>
     <div>
         <section>
-            <div class="d-flex align-items-center gap-2 gap-lg-4 mb-4">
-                <div>
-                    <img class="icon-img" src="@/img/projects/logo-esquina_cultural.svg"
-                        alt="Ícono de Esquina Cultural">
+            <div class="row align-items-center gap-4 my-4 title-container">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-2 gap-lg-4">
+                    <div>
+                        <img class="icon-img" src="@/img/projects/logo-esquina_cultural.svg"
+                            alt="Ícono de Esquina Cultural">
+                    </div>
+                    <h2 class="mb-0">Esquina Cultural</h2>
                 </div>
-                <h2>Esquina Cultural</h2>
-                <div class="d-flex justify-content-center ps-0 ms-0 ps-lg-4 ms-lg-4">
+                <div class="col-12 col-sm-4 d-flex justify-content-center ps-0 ms-0 ps-lg-4 ms-lg-4">
                     <a class="text-center visit-website-button"
                         href="https://esquina-cultural-production-l2ojal.laravel.cloud" target="_blank">Sitio web</a>
                 </div>

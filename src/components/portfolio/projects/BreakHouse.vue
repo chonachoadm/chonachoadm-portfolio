@@ -1,14 +1,59 @@
 <script>
 import { createHorizontalScroll } from '@/utils/horizontalScroll'
 
+import desktop1 from '@/img/projects/demos/break-house/break-house-1.webp'
+import desktop2 from '@/img/projects/demos/break-house/break-house-2.webp'
+import desktop3 from '@/img/projects/demos/break-house/break-house-3.webp'
+import desktop4 from '@/img/projects/demos/break-house/break-house-4.webp'
+import mobile1 from '@/img/projects/demos/break-house/mobile/break-house-mobile-1.webp'
+import mobile2 from '@/img/projects/demos/break-house/mobile/break-house-mobile-2.webp'
+import mobile3 from '@/img/projects/demos/break-house/mobile/break-house-mobile-3.webp'
+import mobile4 from '@/img/projects/demos/break-house/mobile/break-house-mobile-4.webp'
+
+const MOBILE_QUERY = '(max-width: 767.98px)'
+
 export default {
     name: 'BreakHouse',
+    data() {
+        return {
+            isMobile: window.matchMedia(MOBILE_QUERY).matches,
+            desktopImages: [
+                { src: desktop1, alt: 'Break House 1' },
+                { src: desktop2, alt: 'Break House 2' },
+                { src: desktop3, alt: 'Break House 3' },
+                { src: desktop4, alt: 'Break House 4' },
+            ],
+            mobileImages: [
+                { src: mobile1, alt: 'Break House 1' },
+                { src: mobile2, alt: 'Break House 2' },
+                { src: mobile3, alt: 'Break House 3' },
+                { src: mobile4, alt: 'Break House 4' },
+            ],
+        }
+    },
+    computed: {
+        demoImages() {
+            return this.isMobile ? this.mobileImages : this.desktopImages
+        },
+    },
     async mounted() {
-        createHorizontalScroll(this.$el)
+        this.horizontalScroll = await createHorizontalScroll(this.$el)
+        this.mediaQuery = window.matchMedia(MOBILE_QUERY)
+        this.mediaQuery.addEventListener('change', this.handleBreakpointChange)
     },
     beforeUnmount() {
         this.horizontalScroll?.tween.kill()
         this.horizontalScroll?.trigger.kill()
+        this.mediaQuery?.removeEventListener('change', this.handleBreakpointChange)
+    },
+    methods: {
+        async handleBreakpointChange(event) {
+            this.isMobile = event.matches
+            this.horizontalScroll?.tween.kill()
+            this.horizontalScroll?.trigger.kill()
+            await this.$nextTick()
+            this.horizontalScroll = await createHorizontalScroll(this.$el)
+        },
     },
 }
 </script>
@@ -17,12 +62,14 @@ export default {
     <div>
 
         <section>
-            <div class="d-flex align-items-center gap-2 gap-lg-4 mb-4 title-container">
-                <div>
-                    <img class="icon-img" src="@/img/projects/logo-break_house.svg" alt="Ícono de Break House">
+            <div class="row align-items-center gap-4 my-4 title-container">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-2 gap-lg-4">
+                    <div>
+                        <img class="icon-img" src="@/img/projects/logo-break_house.svg" alt="Ícono de Break House">
+                    </div>
+                    <h2 class="mb-0">Break House</h2>
                 </div>
-                <h2>Break House</h2>
-                <div class="d-flex justify-content-center ps-0 ms-0 ps-lg-4 ms-lg-4">
+                <div class="col-12 col-sm-4 d-flex justify-content-center ps-0 ms-0 ps-lg-4 ms-lg-4">
                     <a class="text-center visit-website-button" href="https://final-ah-f76b6.web.app"
                         target="_blank">Sitio
                         web</a>
@@ -45,14 +92,8 @@ export default {
                 </div>
                 <div class="demo-images-container">
                     <div class="demo-images">
-                        <img class="img-fluid rounded-xl" src="@/img/projects/demos/break-house/break-house-1.webp"
-                            alt="Break House 1">
-                        <img class="img-fluid rounded-xl" src="@/img/projects/demos/break-house/break-house-2.webp"
-                            alt="Break House 2">
-                        <img class="img-fluid rounded-xl" src="@/img/projects/demos/break-house/break-house-3.webp"
-                            alt="Break House 3">
-                        <img class="img-fluid rounded-xl" src="@/img/projects/demos/break-house/break-house-4.webp"
-                            alt="Break House 4">
+                        <img v-for="(image, index) in demoImages" :key="index" class="img img-fluid rounded-xl"
+                            :src="image.src" :alt="image.alt">
                     </div>
                 </div>
                 <div class="w-100 d-flex justify-content-center mt-4">
@@ -94,11 +135,10 @@ section {
     flex-wrap: nowrap;
     height: fit-content;
     gap: 2em;
+    align-items: center;
 }
 
 .demo-images img {
-    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 1em;
     width: 90%;
     max-width: 100vw;
     max-height: 100vh;
