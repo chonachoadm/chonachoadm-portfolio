@@ -48,7 +48,7 @@ export default {
                     <li><a href="https://github.com/chonachoadm/caja-club" class="link-footer" target="_blank"
                             rel="noopener noreferrer">Caja Club</a></li>
                     <li><a href="https://github.com/chonachoadm/cia-jeruncio" class="link-footer" target="_blank"
-                            rel="noopener noreferrer">Cía Jeruncio</a>
+                            rel="noopener noreferrer">Cía. Jeruncio</a>
                     </li>
                     <li><a href="https://github.com/chonachoadm/bosque-de-los-sentidos" class="link-footer"
                             target="_blank" rel="noopener noreferrer">Bosque de
