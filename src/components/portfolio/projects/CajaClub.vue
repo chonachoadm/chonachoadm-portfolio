@@ -98,7 +98,6 @@ export default {
             </div>
         </section>
     </div>
-
 </template>
 
 <style scoped>
@@ -162,7 +161,6 @@ h3 {
     color: black;
     font-weight: bold;
     font-size: 1.1em;
-
     transition: all .2s ease;
 }
 

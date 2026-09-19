@@ -64,7 +64,6 @@ export default {
         <div class="row w-100 text-center rights-reserved">
             <p> © {{ new Date().getFullYear() }} Ignacio López. Todos los derechos reservados.</p>
         </div>
-
     </footer>
 </template>
 

@@ -142,7 +142,6 @@ h2 {
 
 .section-techs {
     overflow: hidden;
-    /* margin-inline: 2em; */
     mask-image: linear-gradient(to right,
             transparent 10%,
             black 40%,
@@ -170,12 +169,7 @@ ul li img {
     object-fit: cover;
 }
 
-ul li {
-    /* margin: 0 1em; */
-}
-
 @keyframes scroll {
-
     from {
         transform: translateX(0);
     }

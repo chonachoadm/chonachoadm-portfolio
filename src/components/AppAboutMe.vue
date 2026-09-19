@@ -41,7 +41,6 @@ p {
 section {
     margin: 10%;
     scroll-margin-top: 4rem;
-
 }
 
 .box-about-me {
@@ -50,7 +49,6 @@ section {
     justify-content: start;
     gap: 4em;
 }
-
 
 @media (max-width: 1024px) {
     section {

@@ -10,19 +10,10 @@ export default {
     RouterView,
     AppFooter
   },
-  // data() {
-  //   return {
-  //     openNav: false,
-  //   }
-  // },
 }
 </script>
 
 <template>
-  <!-- <button class="nav-toggle" @click="openNav = !openNav">
-    ☰
-  </button> -->
-  <!-- <AppNav :is-nav-open="openNav" @toggleNav="openNav = !openNav" /> -->
   <header>
     <AppNav />
   </header>
@@ -43,17 +34,6 @@ h1 {
 }
 
 @media (max-width: 1024px) {
-
-  /* .openNav {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    z-index: 1000;
-  } */
-
   .nav-toggle {
     position: fixed;
     display: flex;

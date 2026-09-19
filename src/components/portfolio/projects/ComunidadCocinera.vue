@@ -60,7 +60,6 @@ export default {
 
 <template>
     <div>
-
         <section>
             <div class="d-flex align-items-center gap-2 gap-lg-4 my-4">
                 <div>
@@ -93,7 +92,6 @@ export default {
             </div>
         </section>
     </div>
-
 </template>
 
 <style scoped>
@@ -156,7 +154,6 @@ h3 {
     color: black;
     font-weight: bold;
     font-size: 1.1em;
-
     transition: all .2s ease;
 }
 

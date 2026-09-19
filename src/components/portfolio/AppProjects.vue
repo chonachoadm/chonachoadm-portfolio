@@ -1,7 +1,6 @@
 <script>
 import { RouterView } from "vue-router";
 
-
 export default {
     name: 'AppProjects',
     data() {
@@ -51,7 +50,6 @@ export default {
                 </li>
             </ul>
         </div>
-
         <RouterView />
     </section>
 </template>
@@ -74,7 +72,6 @@ section {
 li {
     padding: .7em 2em;
     box-shadow: inset 0 -10px 10px -10px rgba(0, 0, 0, 0.2);
-
     display: flex;
     align-items: center;
 }
@@ -94,13 +91,11 @@ li:has(.router-link-exact-active) {
 @media (max-width: 768px) {
     section {
         width: 100%;
-        /* overflow: scroll; */
     }
 
     .techs-list {
         flex-wrap: wrap;
         width: 100%;
-        /* overflow-x: scroll; */
     }
 
     li {

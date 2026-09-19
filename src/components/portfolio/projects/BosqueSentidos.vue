@@ -93,10 +93,8 @@ export default {
                         está
                         en modo de prueba.</em></p>
             </div>
-
         </section>
     </div>
-
 </template>
 
 <style scoped>

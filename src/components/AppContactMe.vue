@@ -5,7 +5,6 @@ const COOLDOWN_TIME = 60 * 1000
 const COOLDOWN_KEY = 'contact_form_last_sent'
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
-
 export default {
     name: 'AppContactMe',
     data() {
@@ -71,16 +70,13 @@ export default {
                     COOLDOWN_KEY,
                     Date.now()
                 )
-
                 this.success = true
                 this.form.email = ''
                 this.form.name = ''
                 this.form.message = ''
-
             } catch (error) {
                 this.error = true
                 console.error(error)
-
             } finally {
                 this.loading = false
             }
@@ -96,7 +92,6 @@ export default {
             <p v-if="success" class="success">
                 Mensaje enviado! A la brevedad nos comunicaremos con vos.
             </p>
-
             <p v-if="error" class="error">
                 Algo salió mal. Por favor, intentá de nuevo.
             </p>
@@ -110,7 +105,6 @@ export default {
                     <label class="form-label" for="name"><strong>Nombre</strong></label>
                     <input class="form-control" type="text" id="name" name="name" v-model="form.name" />
                     <small v-if="errorMessageName">{{ errorMessageName }}</small>
-
                 </div>
             </div>
             <div>
@@ -118,7 +112,6 @@ export default {
                         proyecto</strong></label>
                 <textarea class="form-control" rows="5" id="message" name="message" v-model="form.message"></textarea>
                 <small v-if="errorMessageContent">{{ errorMessageContent }}</small>
-
             </div>
             <input type="text" name="company" style="display:none">
             <div class="w-100 d-flex justify-content-center mt-4">
@@ -146,7 +139,6 @@ section {
     color: black;
     font-weight: bold;
     font-size: 1.1em;
-
     transition: all .2s ease;
 }
 

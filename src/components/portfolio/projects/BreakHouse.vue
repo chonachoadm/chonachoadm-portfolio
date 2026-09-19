@@ -60,7 +60,6 @@ export default {
 
 <template>
     <div>
-
         <section>
             <div class="row align-items-center gap-4 my-4 title-container">
                 <div class="col-12 col-md-4 d-flex align-items-center justify-content-center gap-2 gap-lg-4">
@@ -110,8 +109,6 @@ section {
     padding: 3% 10%;
     background-color: rgb(255, 255, 255);
 }
-
-
 
 .icon-img {
     width: 100px;

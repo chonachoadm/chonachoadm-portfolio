@@ -53,7 +53,6 @@ export default {
         }
     },
     mounted() {
-        // resync nav-bar styles if the breakpoint is crossed via resize instead of scroll
         window.matchMedia("(max-width: 1024px)").addEventListener("change", (e) => {
             if (e.matches) return
             if (window.scrollY > 0) {
@@ -66,7 +65,6 @@ export default {
         });
     },
     watch: {
-
         openNav(newVal) {
             if (!window.matchMedia("(max-width: 1024px)").matches) {
                 return
@@ -90,6 +88,7 @@ export default {
     },
 }
 </script>
+
 <template>
     <button v-if="!openNav" class="fs-2 nav-toggle" @click="openNav = true">
         ☰
@@ -131,11 +130,9 @@ export default {
     z-index: 1000;
     background-color: #000000d9;
     backdrop-filter: blur(2em);
-    /* height: 100px; */
     width: 100%;
     padding: 2em;
 }
-
 
 .nav-list {
     list-style: none;
@@ -159,7 +156,6 @@ a {
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 0% 3px;
-
     transition: background-size 0.3s ease;
 }
 
