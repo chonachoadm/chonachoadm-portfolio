@@ -43,15 +43,13 @@ export default {
         this.mediaQuery.addEventListener('change', this.handleBreakpointChange)
     },
     beforeUnmount() {
-        this.horizontalScroll?.tween.kill()
-        this.horizontalScroll?.trigger.kill()
+        this.horizontalScroll?.kill()
         this.mediaQuery?.removeEventListener('change', this.handleBreakpointChange)
     },
     methods: {
         async handleBreakpointChange(event) {
             this.isMobile = event.matches
-            this.horizontalScroll?.tween.kill()
-            this.horizontalScroll?.trigger.kill()
+            this.horizontalScroll?.kill()
             await this.$nextTick()
             this.horizontalScroll = await createHorizontalScroll(this.$el)
         },

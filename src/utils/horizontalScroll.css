@@ -1,0 +1,48 @@
+.demo-images-container.is-carousel {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.demo-images-container.is-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.demo-images-container.is-carousel .demo-images {
+    width: 100%;
+    gap: 1rem;
+}
+
+.demo-images-container.is-carousel .demo-images img {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: none;
+    margin: 0;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.demo-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: .6rem;
+    margin-block: 1rem;
+}
+
+.demo-carousel-dots button {
+    width: .75rem;
+    height: .75rem;
+    padding: 0;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color .2s ease;
+}
+
+.demo-carousel-dots button.active {
+    background-color: black;
+}
