@@ -38,6 +38,7 @@ export default {
     },
     async mounted() {
         this.horizontalScroll = await createHorizontalScroll(this.$el)
+        window.scrollTo({ top: 0, left: 0 })
         this.mediaQuery = window.matchMedia(MOBILE_QUERY)
         this.mediaQuery.addEventListener('change', this.handleBreakpointChange)
     },

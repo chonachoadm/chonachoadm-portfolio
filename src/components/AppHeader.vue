@@ -8,6 +8,19 @@ export default {
         <div class="box-header">
             <h1>Ignacio <br />Lopez</h1>
             <h2>Desarrollador Web</h2>
+            <div class="d-flex justify-content-around">
+                <RouterLink to="/portfolio/esquina-cultural" class="portfolio-button">
+                    Portfolio
+                </RouterLink>
+                <div class="dropdown">
+                    <button class="dropdown-toggle cv-button" type="button" data-bs-toggle="dropdown">Descargar
+                        CV</button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/files/CV-ignacio_lopez.pdf" download>Español</a></li>
+                        <li><a class="dropdown-item" href="/files/ignacio_lopez-resume.pdf" download>English</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="d-flex flex-column align-items-start gap-4 my-4 p-4 section-techs">
             <ul class="d-flex list-unstyled justify-content-center align-items-center track-techs">
@@ -138,6 +151,40 @@ h2 {
     height: 100vh;
     transition: transform 0.3s ease-in-out;
     padding-left: 10%;
+}
+
+.portfolio-button {
+    text-decoration: none;
+    background-color: black;
+    padding: .5em 1em;
+    border: 3px solid black;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all .2s ease;
+}
+
+.portfolio-button:focus,
+.portfolio-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.cv-button {
+    text-decoration: none;
+    background-color: transparent;
+    padding: .5em 1em;
+    border: 3px solid black;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: all .2s ease;
+}
+
+.cv-button:focus,
+.cv-button:hover {
+    background-color: black;
+    color: white;
 }
 
 .section-techs {
