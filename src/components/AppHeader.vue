@@ -8,7 +8,7 @@ export default {
         <div class="box-header">
             <h1>Ignacio <br />Lopez</h1>
             <h2>Desarrollador Web</h2>
-            <div class="d-flex justify-content-around">
+            <div class="d-flex justify-content-around mt-4">
                 <RouterLink to="/portfolio/esquina-cultural" class="portfolio-button">
                     Portfolio
                 </RouterLink>
